@@ -1,0 +1,59 @@
+.sidenav {
+    background: whitesmoke;
+    width: 170px;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Roboto";
+}
+
+.content {
+    padding: 20px;
+}
+
+.list-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 32px;
+    gap: 25px;
+    .item-home {
+        display: flex;
+        align-items: center;
+        a {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 5px;
+            font-family: "Poppins";
+            font-size: 10pt;
+            font-weight: 600;
+            background: rgb(2,0,36);
+            background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+    .item-products {
+        display: flex;
+        align-items: center;
+        a {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 5px;
+            font-family: "Poppins";
+            font-size: 10pt;
+            font-weight: 600;
+            background: rgb(2,0,36);
+            background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}

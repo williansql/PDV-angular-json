@@ -1,0 +1,39 @@
+<div class="mat-elevation-z4">
+    <table mat-table [dataSource]="produtos">
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+            <th class="mat-header-cell-id" mat-header-cell *matHeaderCellDef>Id</th>
+            <td class="mat-cell" mat-cell *matCellDef="let row">{{ row.id }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th class="mat-header-cell-name" mat-header-cell *matHeaderCellDef>Name</th>
+            <td class="mat-cell" mat-cell *matCellDef="let row">{{ row.name }}</td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="price">
+            <th class="mat-header-cell-price" mat-header-cell *matHeaderCellDef>Preço</th>
+            <td class="mat-cell" mat-cell *matCellDef="let row">
+                {{ row.price | currency : "BRL" }}
+            </td>
+        </ng-container>
+
+        <!-- action column -->
+        <ng-container matColumnDef="action">
+            <th class="mat-header-cell-action" mat-header-cell *matHeaderCellDef>Ações</th>
+            <td class="mat-cell" mat-cell *matCellDef="let row">
+                <a routerLink="/atualizar-produto/{{ row.id }}" class="edit">
+                    <i class="material-icons"> edit </i>
+                </a>
+                <a routerLink="/deletar-produto/{{ row.id }}" class="delete">
+                    <i class="material-icons"> delete </i>
+                </a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</div>

@@ -1,0 +1,51 @@
+.Bt{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.Bt
+    button:hover{ cursor: pointer; }
+    button{
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.bt2{
+    background-color: red;
+}
+
+.bt1{
+    background-color: green;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+mat-card{
+    width: 500px;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+

@@ -1,0 +1,29 @@
+.footer {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+    position: fixed;
+    bottom: 0;
+}
+
+.red {
+    color: #c2185b;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: small;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        img {
+            // width: 60px;
+            height: 60px;
+            margin-left: 20px;
+        }
+    }
+}

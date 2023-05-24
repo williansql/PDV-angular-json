@@ -1,0 +1,41 @@
+.header {
+    background: rgb(2,0,36);
+    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+    display: flex;
+    align-self: center;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: fit-content;
+    font-family: "Poppins";
+    font-size: 10pt;
+    color: whitesmoke;
+}
+
+.header .logo {
+    height: 60px;
+    border: 2px;
+    border-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.header .title-group {
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: whitesmoke;
+    padding-left: 50px;
+}
+
+.header .title-group i {
+    padding-right: 10px;
+}
+
+.headerB{
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}

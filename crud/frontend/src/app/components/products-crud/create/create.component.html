@@ -1,0 +1,24 @@
+<mat-card>
+    <div class="mainContent">
+        <mat-card-title>
+            Novo Produto
+        </mat-card-title>
+        <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput placeholder="Nome" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="R$ 0.00" currencyMask formControlName="price">
+            </mat-form-field>
+        </form>
+        <div class="Bt">
+            <button class="bt1" (click)="prodCreate()">
+                SALVAR
+            </button>
+            <button class="bt2" (click)="cancel()">
+                CANCELAR
+            </button>
+        </div>
+    </div>
+</mat-card>
+
