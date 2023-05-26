@@ -1,46 +1,6 @@
 {
-  "produtos": [
-    {
-      "name": "geladeira philco duplex frost free 350 litros ",
-      "price": 1599.9,
-      "category": null,
-      "id": 2
-    },
-    {
-      "name": "fogão breeze autentic 4 bocas economia a",
-      "price": 359.9,
-      "category": null,
-      "id": 3
-    },
-    {
-      "name": "mesa barcelona",
-      "price": 1279.9,
-      "category": "",
-      "id": 4
-    },
-    {
-      "name": "cozinha itatiaia 4pçs",
-      "price": 2149.9,
-      "category": null,
-      "id": 5
-    },
-    {
-      "name": "cama box separada molas ensacadas ortobom",
-      "price": 7869.9,
-      "category": null,
-      "id": 6
-    },
-    {
-      "name": "playstation 5 com 2 controles + jogo red dead redemption 2",
-      "price": 3589.9,
-      "category": "",
-      "id": 7
-    },
-    {
-      "name": "haha",
-      "price": 47.5,
-      "category": "",
-      "id": 8
-    }
-  ]
+  "produtos": [],
+  "category": [],
+  "entrada": [],
+  "saida": []
 }

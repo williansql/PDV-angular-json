@@ -1,3 +1,11 @@
+.card{
+    background: whitesmoke;
+    color: #333;
+    border-radius: 15px;
+}
+.title{
+    margin-bottom: 30px;
+}
 .Bt{
     display: flex;
     flex-direction: row;
@@ -47,5 +55,8 @@ mat-card{
     align-items: center;
     justify-content: center;
     padding: 30px;
+}
+input{
+    color: white;
 }
 

@@ -10,17 +10,16 @@ import { IConfig, NgxMaskModule } from 'ngx-mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DeleteComponent } from './components/products-crud/delete/delete.component';
+import { UpdateComponent } from './components/products-crud/update/update.component';
+import { ReadComponent } from './components/products-crud/read/read.component';
 import { CreateComponent } from './components/products-crud/create/create.component';
 import { ProductsCrudComponent } from './components/products-crud/products-crud.component';
-import { ReadComponent } from './components/products-crud/read/read.component';
-import { UpdateComponent } from './components/products-crud/update/update.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
-import { NavComponent } from './components/template/nav/nav.component';
-import { HomeComponent } from './components/views/home/home.component';
-import { ProductsComponent } from './components/views/products/products.component';
 import { MaterialImportsModule } from './material-imports/material-imports.module';
-import { DeleteComponent } from './components/products-crud/delete/delete.component';
 
 registerLocaleData(localePt);
 
@@ -52,7 +51,6 @@ export const customCurrencyMaskConfig = {
         FooterComponent,
         NavComponent,
         HomeComponent,
-        ProductsComponent,
         ProductsCrudComponent,
         CreateComponent,
         ReadComponent,

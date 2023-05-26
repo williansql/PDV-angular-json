@@ -1,20 +1,63 @@
-table{
-    width: 80%;
+hr{
+    margin-right: 30px;
+}
+.titleProd{
+    margin: 30px 30px;
+    font-family: "Poppins";
+    font-size: 22pt;
+    color: #333;
+    font-weight: 700;
 }
 
-.edit > i {
-    color: darkkhaki;
-    margin-right: 10px;
+.card{
+    background-color: whitesmoke;
 }
 
-.delete > i {
-    color: brown;
-    margin-right: 10px;
+.table{
+    width: 100%;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: "Poppins";
+    font-weight: 500;
 }
+.tableProd{
+    margin-left: 30px;
+    padding-bottom: 7px;
 
-a{
-    margin-right: 10px;
+    .listProd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .orderedA{
+            display: flex;
+            align-items: start;
+            width: 700px;
+            margin-top: 10px;
+            .prodId{
+            width: 50px;
+            }
+            .prodName{
+                width: 700px;
+            }
+        }
+        .orderedB{
+            display: flex;
+            align-itens: start;
+            width: 700px;
+            margin-top: 10px;
+            .prodPrice{
+                width: 350px;
+            }
+            .icons{
+                margin-right: 30px;
+                display: flex;
+                justify-content: end;
+                width: 50px;
+                gap: 20px;
+            }
+
+        }
+    }
 }
-
-
 
