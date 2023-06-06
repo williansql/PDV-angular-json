@@ -1,8 +1,26 @@
-<div class="Bt">
-    <button (click)="prodCreate()">
-        <i class="material-icons"> add_circle </i>
-        Novo produto
-    </button>
+<div
+    style="display: flex;"
+    class="buttons">
+    <div class="Bt">
+        <button (click)="prodCreate()">
+            <i class="material-icons"> add_circle </i>
+            Novo produto
+        </button>
+    </div>
+    <div class="Bt">
+        <button routerLink="/entrada-produto">
+            <i class="material-icons"> add_circle </i>
+            ENTRADA
+        </button>
+    </div>
+    <div class="Bt">
+        <button routerLink="/saida-produto">
+            <i class="material-icons"> remove_circle </i>
+            saída
+        </button>
+    </div>
 </div>
+
+<router-outlet></router-outlet>
 
 <app-read></app-read>

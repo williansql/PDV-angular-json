@@ -1,12 +1,48 @@
 <mat-toolbar color="primary" class="header mat-elevation-z5">
-  <span>
-    <a href="">
-      <img routerLink="inicio" class="logo" src="/assets/fofapps.svg" alt="tô na Disney">
-    </a>
-  </span>
-  <span class="title-group">
-    <a class="headerB">
-      <span>{{ menu }}</span>
-    </a>
-  </span>
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+        <div class="left">
+            <span>
+                <a href="">
+                    <img
+                        routerLink="inicio"
+                        class="logo"
+                        src="/assets/fofapps.svg"
+                        alt="tô na Disney"
+                    />
+                </a>
+            </span>
+            <span class="title-group">
+                <a class="headerB">
+                    <span>{{ menu }}</span>
+                </a>
+            </span>
+        </div>
+        <div class="right">
+            <div class="headerC">
+                <div class="item-home">
+                    <a routerLink="inicio" href="">
+                        <i class="material-icons"> home </i>
+                        <span>Inicio</span>
+                    </a>
+                </div>
+                <div class="item-products">
+                  <a routerLink="categoria" href="">
+                    <i class="material-icons">
+                        category
+                    </i>
+                    <span>Categoria</span>
+                  </a>
+                </div>
+                <div class="item-products">
+                  <a routerLink="produtos" href="">
+                    <i class="material-icons">
+                        store
+                    </i>
+                    <span>Produtos</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </mat-toolbar>
+<router-outlet></router-outlet>

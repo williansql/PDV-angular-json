@@ -39,7 +39,9 @@ form{
 }
 
 mat-card{
-    width: 500px;
+    margin: 30px 30px ;
+    width: 700px;
+    background: #fff;
 }
 
 .mainContent{
@@ -48,4 +50,11 @@ mat-card{
     align-items: center;
     justify-content: center;
     padding: 30px;
+}
+
+mat-card-title{
+    margin-top: 20px;
+    font-size: 16pt;
+    font-family: "Poppins";
+    font-weight: 600;
 }

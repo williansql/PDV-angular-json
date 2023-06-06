@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../../model/product.model';
-import { ProductsService } from '../../services/products-service/products.service';
+import { Product } from 'src/app/shared/model/product.model';
+import { ProductsService } from 'src/app/shared/services/products.service';
 
 @Component({
     selector: "app-delete",
@@ -17,10 +17,10 @@ export class DeleteComponent implements OnInit{
         private productsService: ProductsService,){}
 
     deleteProd(produto: Product){
-        this.productsService.delete(this.produto.id!).subscribe(produto => {
+        this.productsService.productDelete(this.produto.id!).subscribe(produto => {
             this.productsService.showMenssage('Produto deletado com sucesso!');
-            this.router.navigate(['/produtos'])
-        })
+            this.router.navigate(['/produtos']);
+        });
     }
 
     cancel(){
@@ -29,7 +29,7 @@ export class DeleteComponent implements OnInit{
 
     ngOnInit() {
         const id = this.route.snapshot.paramMap.get('id');
-        this.productsService.readById(id!).subscribe((produto) => {
+        this.productsService.getById(id!).subscribe((produto) => {
             this.produto = produto;
         });
     }

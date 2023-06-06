@@ -1,0 +1,68 @@
+<mat-card class="card">
+    <mat-card-title class="titleProd"> CATEGORIAS </mat-card-title>
+    <div class="table">
+        <table style="width: 100%;">
+            <thead>
+                <div>
+                    <tr
+                        style="
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                            font-weight: 700;
+                        "
+                    >
+                        <div class="orderedtitle">
+                            <th class="id">ID</th>
+                            <th (click)="orderCategory()" class="name">CATEGORIA</th>
+                        </div>
+                        <div class="orderedB">
+                            <th style="margin-right: 4px" class="actions">AÇÕES</th>
+                        </div>
+                    </tr>
+                    <hr>
+                </div>
+            </thead>
+            <tbody>
+                <div *ngFor="let category of categories">
+                    <div>
+                        <tr>
+                            <div class="orderedA">
+                                <td
+                                    style="display: flex; justify-content: center"
+                                    class="id"
+                                >
+                                    {{ category.id }}
+                                </td>
+                                <td class="name">
+                                    <span>{{ category.name }} </span>
+                                </td>
+                                <span style="width: 100%" class="line"></span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: end"
+                                class="orderedB"
+                            >
+                                <td>
+                                    <a routerLink="/editar-categoria/{{ category.id }}">
+                                        <i style="color: #00796b;" class="material-icons">edit</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a routerLink="/deletar-categoria/{{ category.id }}">
+                                        <i style="color: #d32f2f;" class="material-icons">delete</i>
+                                    </a>
+                                </td>
+                            </div>
+                        </tr>
+                        <hr>
+                    </div>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <button [disabled]="pageActual === 1" (click)="changePage(-1)">Anterior</button>
+        <span>Página {{ pageActual }} de {{ totalPages }}</span>
+        <button [disabled]="pageActual == totalPages" (click)="changePage(1)">Próxima</button>
+    </div>
+</mat-card>

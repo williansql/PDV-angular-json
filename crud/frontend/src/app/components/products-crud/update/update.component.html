@@ -1,27 +1,23 @@
 <mat-card>
     <div class="mainContent">
         <mat-card-title>
-            Atualizar Produto
+            ATUALIZAR PRODUTO
         </mat-card-title>
         <form>
             <mat-form-field>
-                <input matInput placeholder="Nome" [(ngModel)]="produto!.name" name="name" >
+                <mat-label>Categoria</mat-label>
+                <mat-select [(ngModel)]="selectCategoryId" name="category">
+                    <mat-option *ngFor="let category of categories" [value]="category.id">
+                        {{ category.name }}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
-            <span style="font-family: Poppins; font-size: 12pt; font-weight: 500; margin: 10px;">Preço de compra</span>
             <mat-form-field>
-                <input matInput placeholder="R$ 0.00" [(ngModel)]="produto!.priceBuy" currencyMask name="priceBuy" >
-            </mat-form-field>
-            <span style="font-family: Poppins; font-size: 12pt; font-weight: 500; margin: 10px;">Preço de compra</span>
-            <mat-form-field>
-                <input matInput placeholder="R$ 0.00" [(ngModel)]="produto!.priceSale" currencyMask name="priceSale" >
-            </mat-form-field>
-            <span style="font-family: Poppins; font-size: 12pt; font-weight: 500; margin: 10px;">Preço de compra</span>
-            <mat-form-field>
-                <input matInput placeholder="R$ 0.00" [(ngModel)]="produto!.quantity" currencyMask name="quantity" >
+                <input matInput [(ngModel)]="produto.name" name="name">
             </mat-form-field>
         </form>
         <div class="Bt">
-            <button class="bt1" (click)="prodUpdate()">
+            <button class="bt1" (click)="productUpdate()">
                 SALVAR
             </button>
             <button class="bt2" (click)="cancel()">

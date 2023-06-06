@@ -1,0 +1,20 @@
+<mat-card>
+    <div class="mainContent">
+        <mat-card-title>
+            Você quer deletar esse produto?
+        </mat-card-title>
+        <form>
+            <mat-form-field class="place">
+                <input matInput placeholder="Nome" disabled [value]="categoryId!.name | uppercase">
+            </mat-form-field>
+        </form>
+        <div class="Bt">
+            <button mat-raised-button color="warn" class="bt1" (click)="deleteCategory(categoryId)">
+                SIM, DELETAR
+            </button>
+            <button mat-raised-button  color="accent"  class="bt2" (click)="cancel()">
+                NÃO, CANCELAR
+            </button>
+        </div>
+    </div>
+</mat-card>

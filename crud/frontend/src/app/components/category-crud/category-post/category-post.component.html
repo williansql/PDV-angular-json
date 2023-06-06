@@ -1,0 +1,20 @@
+<mat-card class="card">
+    <div class="mainContent">
+        <mat-card-title class="title">
+            ADICIONAR CATEGORIA
+        </mat-card-title>
+        <form [formGroup]="categoryForm">
+            <mat-form-field>
+                <input matInput placeholder="Nome categoria" formControlName="name">
+            </mat-form-field>
+        </form>
+        <div class="Bt">
+            <button class="bt1" (click)="newCategory()">
+                SALVAR
+            </button>
+            <button class="bt2" (click)="cancel()">
+                CANCELAR
+            </button>
+        </div>
+    </div>
+</mat-card>

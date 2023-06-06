@@ -1,7 +1,9 @@
 .Bt
     button:hover{ cursor: pointer; }
     button{
-    background-color: whitesmoke;
+    margin: 40px 15px 20px 15px;
+    color: #fff;
+    background-color: #00796b;
     border: none;
     border-radius: 5px;
     width: max-content;
@@ -15,4 +17,5 @@
     font-weight: 500;
     gap: 5px;
     margin-bottom: 30px;
+    box-shadow: 5px 5px 10px -2px #111111;
 }

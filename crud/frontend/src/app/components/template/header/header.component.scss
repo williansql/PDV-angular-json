@@ -1,6 +1,15 @@
+.left{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: fit-content;
+    font-family: "Poppins";
+    font-size: 10pt;
+    color: whitesmoke;
+}
 .header {
-    background: rgb(2,0,36);
-    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+    background: linear-gradient(90deg, #c4c4c4 0%, #c4c4c4 54%, rgb(255, 255, 255) 100%);
+    // background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
     display: flex;
     align-self: center;
 }
@@ -18,7 +27,7 @@
 .header .logo {
     height: 60px;
     border: 2px;
-    border-color: #fff;
+    // background: #fff;
     display: flex;
     align-items: center;
 }
@@ -38,4 +47,48 @@
     display: flex;
     align-items: center;
     padding-top: 3px;
+}
+.headerC{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    .item-home {
+        display: flex;
+        align-items: center;
+        a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 15px;
+            font-family: "Poppins";
+            font-size: 10pt;
+            font-weight: 600;
+            background: #00796b;
+            // background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+            border-radius: 10px;
+            padding: 2px 15px 2px 15px;
+            box-shadow: 2px 2px 5px -1px #333;
+        }
+    }
+    .item-products {
+        display: flex;
+        align-items: center;
+        a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 15px;
+            font-family: "Poppins";
+            font-size: 10pt;
+            font-weight: 600;
+            background: #00796b;
+            // background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+            border-radius: 10px;
+            padding: 2px 15px 2px 15px;
+            box-shadow: 2px 2px 5px -1px #333;
+        }
+    }
 }

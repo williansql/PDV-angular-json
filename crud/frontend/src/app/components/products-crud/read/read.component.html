@@ -1,46 +1,73 @@
-<form action="">
-    <mat-card class="card">
-        <mat-card-title class="titleProd"> PRODUTOS </mat-card-title>
-        <div class="table">
-            <ul class="tableProd" *ngFor="let produto of produtos; let i = index">
-                <li>
-                    <div class="listProd">
-                        <div class="orderedA">
-                            <span class="prodId">{{ produto.id }}</span>
-                            <span class="prodName">
-                                {{ produto.name | uppercase }}
-                            </span>
+<mat-card class="card">
+    <mat-card-title class="titleProd"> PRODUTOS </mat-card-title>
+    <div class="table">
+        <table style="width: 100%;">
+            <thead>
+                <div>
+                    <tr
+                        style="
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                            font-weight: 700;
+                        "
+                    >
+                        <div class="orderedtitle">
+                            <th class="id">ID</th>
+                            <th (click)="orderProduct()" class="name">NOME</th>
+                            <th (click)="orderCategory()" class="category">CATEGORIA</th>
+                            <th class="quantity">QUANTIDADE</th>
+                            <th class="actions">AÇÔES</th>
                         </div>
-                        <div class="orderedB">
-                            <span class="prodPrice">compra ....
-                                {{ produto.priceBuy | currency: "BRL"}}
-                            </span>
-                            <span class="prodPrice">venda ....
-                                {{ produto.priceSale | currency: "BRL"}}
-                            </span>
-                            <span class="prodPrice">QTD ....
-                                {{ produto.quantity}}
-                            </span>
-                            <div class="icons">
-                                <a  style="color: #039AAB;"
-                                    routerLink="/atualizar-produto/{{ produto.id }}"
-                                    class="edit"
-                                >
-                                    <i class="material-icons"> edit </i>
-                                </a>
-                                <a
-                                    style="color: #d32f2f"
-                                    routerLink="/deletar-produto/{{ produto.id }}"
-                                    class="delete"
-                                >
-                                <i class="material-icons"> delete </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    </tr>
                     <hr>
-                </li>
-            </ul>
-        </div>
-    </mat-card>
-</form>
+                </div>
+            </thead>
+            <tbody>
+                <div *ngFor="let produto of produtos">
+                    <div>
+                        <tr>
+                            <div class="orderedA">
+                                <td
+                                    style="display: flex; justify-content: center"
+                                    class="id"
+                                >
+                                    {{ produto.id }}
+                                </td>
+                                <td class="name">
+                                    <span>{{ produto.name }} </span>
+                                </td>
+                                <td class="category">
+                                    <span>{{ getCategoryName(produto.category) }} </span>
+                                </td>
+                                <td class="quantity">
+                                    <span>{{ produto.quantity }} </span>
+                                </td>
+                                <div
+                                    style="display: flex; justify-content: end"
+                                    class="actions"
+                                >
+                                    <td>
+                                        <a routerLink="/editar-produto/{{ produto.id }}">
+                                            <i style="color: #00796b;" class="material-icons">edit</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a routerLink="/deletar-produto/{{ produto.id }}">
+                                            <i style="color: #d32f2f;" class="material-icons">delete</i>
+                                        </a>
+                                    </td>
+                                </div>
+                            </div>
+                        </tr>
+                        <hr>
+                    </div>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <button [disabled]="paginaAtual === 1" (click)="changePage(-1)">Anterior</button>
+        <span>Página {{ paginaAtual }} de {{ totalPages }}</span>
+        <button [disabled]="paginaAtual == totalPages" (click)="changePage(1)">Próxima</button>
+    </div>
+</mat-card>

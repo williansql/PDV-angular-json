@@ -1,4 +1,6 @@
 .card{
+    margin: 30px 30px;
+    width: 700px;
     background: whitesmoke;
     color: #333;
     border-radius: 15px;
@@ -58,5 +60,12 @@ mat-card{
 }
 input{
     color: white;
+}
+
+mat-card-title{
+    margin-top: 10px;
+    font-size: 18pt;
+    font-family: "Poppins";
+    font-weight: 600;
 }
 

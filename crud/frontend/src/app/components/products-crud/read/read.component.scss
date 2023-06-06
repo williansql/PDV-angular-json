@@ -1,17 +1,48 @@
 hr{
-    margin-right: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.pagination{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    // padding-right: 15px;
+    button{
+        background-color: #00796b;
+        color: white;
+        font-family: 'Poppins';
+        height: 25px;
+        border-radius: 25px;
+        margin: 10px;
+        border: none;
+        box-shadow: 2px 2px 4px #33333370;
+    }
+    button:hover{
+        box-shadow: none;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}
+th.active{
+    font-weight: bold;
 }
 .titleProd{
     margin: 30px 30px;
     font-family: "Poppins";
     font-size: 22pt;
-    color: #333;
+    color: #00796b;
     font-weight: 700;
 }
 
 .card{
+    margin: 20px 15px 20px 15px;
     background-color: whitesmoke;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 .table{
     width: 100%;
@@ -19,44 +50,76 @@ hr{
     color: #333;
     font-family: "Poppins";
     font-weight: 500;
+    display: flex;
 }
-.tableProd{
-    margin-left: 30px;
-    padding-bottom: 7px;
-
-    .listProd{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.head{
+    padding-bottom: 20px;
+}
+tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .orderedtitle{
+        color: #333;
         width: 100%;
-        .orderedA{
-            display: flex;
-            align-items: start;
-            width: 700px;
-            margin-top: 10px;
-            .prodId{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        gap: 10px;
+        .id{
             width: 50px;
-            }
-            .prodName{
-                width: 700px;
-            }
         }
-        .orderedB{
+        .name{
+            width: 60%;
             display: flex;
-            align-itens: start;
-            width: 700px;
-            margin-top: 10px;
-            .prodPrice{
-                width: 350px;
-            }
-            .icons{
-                margin-right: 30px;
-                display: flex;
-                justify-content: end;
-                width: 50px;
-                gap: 20px;
-            }
-
+        }
+        .name:hover{
+            cursor: pointer;
+        }
+        .category{
+            width: 40%;
+            display: flex;
+        }
+        .category:hover{
+            cursor: pointer;
+        }
+        .quantity{
+            width: 100px;
+            display: flex;
+            margin-right: 20px;
+        }
+        .actions{
+            margin-right: 1px;
+            width: 100px;
+            display: flex;
+        }
+    }
+    .orderedA{
+        color: #333;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        gap: 10px;
+        .id{
+            width: 50px;
+        }
+        .name{
+            width: 60%;
+            display: flex;
+        }
+        .category{
+            width: 40%;
+            display: flex;
+        }
+        .quantity{
+            width: 100px;
+            display: flex;
+        }
+        .actions{
+            margin-right: 30px;
+            width: 100px;
+            display: flex;
         }
     }
 }

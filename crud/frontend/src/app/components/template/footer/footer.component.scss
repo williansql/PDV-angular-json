@@ -1,12 +1,12 @@
 .footer {
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,94,158,1) 54%, rgba(16,146,172,1) 100%);
+    background: linear-gradient(90deg, #c4c4c4 0%, #c4c4c4 54%, rgb(255, 255, 255) 100%);
     position: fixed;
     bottom: 0;
 }
 
 .red {
-    color: #c2185b;
+    color: #00796b;
 }
 
 mat-toolbar {

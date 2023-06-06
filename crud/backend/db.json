@@ -1,6 +1,20 @@
 {
   "produtos": [],
-  "category": [],
+  "category": [
+    {
+      "name": "routers",
+      "id": 2
+    },
+    {
+      "name": "computadores",
+      "id": 3
+    },
+    {
+      "name": "cameras",
+      "id": 4
+    }
+  ],
+  "sub-category": [],
   "entrada": [],
   "saida": []
 }

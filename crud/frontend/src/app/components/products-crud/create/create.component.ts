@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProductsService } from '../../services/products-service/products.service';
-import { CategoryService } from '../../services/category-services/category.service';
-import { Category } from '../../model/category.model';
+import { Category } from 'src/app/shared/model/category.model';
+import { CategoryService } from 'src/app/shared/services/category.service';
+import { ProductsService } from 'src/app/shared/services/products.service';
 
 
 @Component({
@@ -24,21 +24,33 @@ export class CreateComponent implements OnInit {
         private fb: FormBuilder) {
             this.produtoForm = this.fb.group({
                 name: ['', Validators.required],
-                priceBuy: '',
-                priceSale: '',
-                quantity:'',
                 category: ''
             });
         }
 
+    orderCategory(){
+        if (this.categories) {
+            this.categories.sort((a, b) => {
+                if (a.name < b.name){
+                    return -1;
+                }else if(a.name > b.name) {
+                    return 1;
+                }else{
+                    return 0;
+                }
+            });
+        }
+    }
+
     loadCategories(){
         this.categoryService.getCategory().subscribe(categories => {
             this.categories = categories;
+            this.orderCategory();
         })
     }
 
     prodCreate() {
-        this.productsService.create(this.produtoForm.value).subscribe(() => {
+        this.productsService.productPost(this.produtoForm.value).subscribe(() => {
             this.productsService.showMenssage('Produto salvo com sucesso!');
             this.produtoForm.reset();
         });
