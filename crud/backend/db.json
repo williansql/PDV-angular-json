@@ -1,5 +1,11 @@
 {
-  "produtos": [],
+  "produtos": [
+    {
+      "name": "intelbrás wrn 150",
+      "subCategory": 3,
+      "id": 1
+    }
+  ],
   "category": [
     {
       "name": "routers",
@@ -12,9 +18,29 @@
     {
       "name": "cameras",
       "id": 4
+    },
+    {
+      "name": "Fofex",
+      "id": 5
     }
   ],
-  "sub-category": [],
+  "sub-category": [
+    {
+      "name": "longo alcance",
+      "category": 2,
+      "id": 1
+    },
+    {
+      "name": "gigabit",
+      "category": 2,
+      "id": 2
+    },
+    {
+      "name": "fast",
+      "category": 2,
+      "id": 3
+    }
+  ],
   "entrada": [],
   "saida": []
 }

@@ -11,6 +11,7 @@ import { ProductsCrudComponent } from './components/products-crud/products-crud.
 import { HomeComponent } from './components/views/home/home.component';
 import { UpdateComponent } from './components/products-crud/update/update.component';
 import { EntradaCrudComponent } from './components/entrada-crud/entrada-crud.component';
+import { SubCatPostComponent } from './components/sub-category/sub-cat-post/sub-cat-post.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
     { path: 'deletar-categoria/:id', component: CategoryDeleteComponent },
     { path: 'editar-categoria/:id', component: CategoryPutComponent },
     { path: 'entrada-produtos', component: EntradaCrudComponent },
-    // { path: '', component: },
+    { path: 'criar-sub-categoria', component: SubCatPostComponent },
     // { path: '', component: },
     // { path: '', component: },
     // { path: '', component: },

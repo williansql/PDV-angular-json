@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
 export class ProductsCrudComponent {
     constructor(private router: Router) {}
 
+
     prodCreate() {
         this.router.navigate(["/criar-produto"]);
     }

@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
-import { Product } from '../model/product.model';
+
 import { Entrada } from '../model/entrada.model';
+import { Product } from '../model/product.model';
 import { Saida } from '../model/saida.model';
 
 @Injectable({
@@ -43,17 +44,9 @@ export class ProductsService {
     }
 
     constructor(
-    private snackBar: MatSnackBar,
-    private http: HttpClient) { }
+        private http: HttpClient
+    ) { }
 
-    showMenssage(msg: string){
-        this.snackBar.open(msg, 'Fechar', {
-            duration: 3000,
-            horizontalPosition: 'start',
-            verticalPosition: 'top'
-
-        })
-    }
 
     productPost(produto: Product): Observable<Product>{
         return this.http.post<Product>(

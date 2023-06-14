@@ -1,1 +1,29 @@
-<p>sub-cat-post works!</p>
+<mat-card class="card">
+    <div class="mainContent">
+        <mat-card-title class="title">
+            ADCIONAR SUB CATEGORIA
+        </mat-card-title>
+        <form [formGroup]="subCategoryForm">
+
+            <mat-form-field>
+                <mat-label>Categoria</mat-label>
+                <mat-select formControlName="category">
+                    <mat-option *ngFor="let category of categories" [value]="category.id">
+                        {{ category.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Nome" formControlName="name">
+            </mat-form-field>
+        </form>
+        <div class="Bt">
+            <button class="bt1" (click)="newSubCategory()">
+                SALVAR
+            </button>
+            <button class="bt2" (click)="cancel()">
+                CANCELAR
+            </button>
+        </div>
+    </div>
+</mat-card>

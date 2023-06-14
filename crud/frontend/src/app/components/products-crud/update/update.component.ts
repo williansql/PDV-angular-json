@@ -28,7 +28,6 @@ export class UpdateComponent implements OnInit {
         this.produto.category = this.selectCategoryId;
         this.productsService.productPut(this.produto).subscribe((prod) => {
             console.log(prod);
-            this.productsService.showMenssage("Produto atualizado.");
             this.router.navigate(["/produtos"]);
         });
     }
